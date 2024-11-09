@@ -22,8 +22,14 @@ struct BarcodeDetailView: View {
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 100)
+                    .frame(width: 300, height: 150)
+                    .background(Color.white)
+                    .cornerRadius(8)
                     .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                        )
             } else {
                 Text("Invalid data or type")
                     .foregroundColor(.red)
