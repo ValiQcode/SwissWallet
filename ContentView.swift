@@ -39,6 +39,15 @@ struct ContentView: View {
             }
         }
     }
+
+    private func deleteBarcodes(at offsets: IndexSet) {
+        offsets.map { barcodes[$0] }.forEach(viewContext.delete)
+        do {
+            try viewContext.save()
+        } catch {
+            print("Error deleting barcode: \(error.localizedDescription)")
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
