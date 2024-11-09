@@ -17,22 +17,22 @@ struct BarcodeDetailView: View {
                 .font(.largeTitle)
                 .padding()
 
-            if let codeImage = drawEAN13Barcode(from: barcode.data ?? "") {
-                Image(uiImage: codeImage)
-                    .interpolation(.none)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 300, height: 150)
+            if barcode.type == "ean13" {
+                if let barcodeImage = drawEAN13Barcode(from: barcode.data ?? "") {
+                    Image(uiImage: barcodeImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 150)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .padding()
+                }
+            } else {
+                QRCodeGenerator.draw(barcode.data ?? "")
+                    .frame(width: 200, height: 200)
                     .background(Color.white)
                     .cornerRadius(8)
                     .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray.opacity(0.2), lineWidth: 1)
-                        )
-            } else {
-                Text("Invalid data or type")
-                    .foregroundColor(.red)
             }
 
             Button("Delete", role: .destructive) {

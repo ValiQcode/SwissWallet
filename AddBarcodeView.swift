@@ -8,6 +8,8 @@ struct AddBarcodeView: View {
     @State private var data: String = ""
     @State private var showingLabelHelp = false
     @State private var showingDataHelp = false
+    @State private var selectedType = "Barcode"
+    let codeTypes = ["Barcode", "QR Code"]
 
     var body: some View {
         NavigationView {
@@ -22,7 +24,7 @@ struct AddBarcodeView: View {
                                 .foregroundColor(.gray)
                         }
                         .popover(isPresented: $showingLabelHelp) {
-                            Text("Enter to label to remember the barcode, such as the store name.")
+                            Text("Enter a descriptive name for this barcode")
                                 .padding()
                         }
                     }
@@ -36,10 +38,20 @@ struct AddBarcodeView: View {
                                 .foregroundColor(.gray)
                         }
                         .popover(isPresented: $showingDataHelp) {
-                            Text("Enter the 13-digit barcode.")
+                            Text(selectedType == "QR Code" ? 
+                                "Enter the text or URL for your QR code" :
+                                "Enter the 13 digits for your barcode")
                                 .padding()
                         }
                     }
+
+                    Picker("Type", selection: $selectedType) {
+                        ForEach(codeTypes, id: \.self) { type in
+                            Text(type)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.vertical, 8)
                 }
             }
             .navigationBarTitle("Add Barcode")
@@ -57,6 +69,7 @@ struct AddBarcodeView: View {
         newBarcode.id = UUID()
         newBarcode.label = label
         newBarcode.data = data
+        newBarcode.type = selectedType == "Barcode" ? "ean13" : "qrcode"
         do {
             try viewContext.save()
         } catch {

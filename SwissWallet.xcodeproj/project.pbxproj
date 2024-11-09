@@ -15,6 +15,7 @@
 		54A3B0852CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3B0842CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift */; };
 		54A3B0872CDE2EAF00B5BF37 /* AddBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3B0862CDE2EA400B5BF37 /* AddBarcodeView.swift */; };
 		54A3B0892CDE2F0600B5BF37 /* BarcodeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3B0882CDE2F0100B5BF37 /* BarcodeDetailView.swift */; };
+		54BCA7302CDF6608004A55B1 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BCA72F2CDF6608004A55B1 /* QRCodeGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		54A3B0842CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EAN13BarcodeGenerator.swift; sourceTree = "<group>"; };
 		54A3B0862CDE2EA400B5BF37 /* AddBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBarcodeView.swift; sourceTree = "<group>"; };
 		54A3B0882CDE2F0100B5BF37 /* BarcodeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeDetailView.swift; sourceTree = "<group>"; };
+		54BCA72F2CDF6608004A55B1 /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,6 +61,7 @@
 				54A3B06D2CDE2D0E00B5BF37 /* SwissWalletApp.swift */,
 				54A3B0862CDE2EA400B5BF37 /* AddBarcodeView.swift */,
 				54A3B0882CDE2F0100B5BF37 /* BarcodeDetailView.swift */,
+				54BCA72F2CDF6608004A55B1 /* QRCodeGenerator.swift */,
 				54A3B0842CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift */,
 				54A3B0832CDE2D5000B5BF37 /* SwissWallet.app */,
 			);
@@ -144,6 +147,7 @@
 				54A3B0702CDE2D0E00B5BF37 /* ContentView.swift in Sources */,
 				54A3B07A2CDE2D0F00B5BF37 /* SwissWallet.xcdatamodeld in Sources */,
 				54A3B06E2CDE2D0E00B5BF37 /* SwissWalletApp.swift in Sources */,
+				54BCA7302CDF6608004A55B1 /* QRCodeGenerator.swift in Sources */,
 				54A3B0892CDE2F0600B5BF37 /* BarcodeDetailView.swift in Sources */,
 				54A3B0872CDE2EAF00B5BF37 /* AddBarcodeView.swift in Sources */,
 			);
