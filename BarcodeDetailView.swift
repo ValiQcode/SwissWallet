@@ -29,7 +29,7 @@ struct BarcodeDetailView: View {
                 }
             } else {
                 QRCodeGenerator.draw(barcode.data ?? "")
-                    .frame(width: 200, height: 200)
+                    .frame(width: 200, height: 200, alignment: .center)
                     .background(Color.white)
                     .cornerRadius(8)
                     .padding()
