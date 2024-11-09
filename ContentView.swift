@@ -39,20 +39,24 @@ struct ContentView: View {
                 BarcodeDetailView(barcode: barcode)
             }
         }
-        .overlay(alignment: .bottomTrailing) {
+        .overlay(alignment: .bottom) {
             Button {
                 showingLegalInfo.toggle()
             } label: {
-                Image(systemName: "questionmark.circle")
-                    .foregroundColor(.gray.opacity(0.6))
+                Text("© 2024 ValiQ Security")
                     .font(.footnote)
+                    .foregroundColor(.gray.opacity(0.6))
+                    .padding(.bottom, 8)
             }
             .popover(isPresented: $showingLegalInfo) {
-                Text("© 2024 ValiQ Security GmbH")
-                    .padding()
-                    .font(.footnote)
+                VStack(spacing: 4) {
+                    Text("© 2024 ValiQ Security GmbH")
+                    Text("https://valiq.com")
+                    Text("Zurich, Switzerland")
+                }
+                .font(.footnote)
+                .padding()
             }
-            .padding(8)
         }
     }
 
