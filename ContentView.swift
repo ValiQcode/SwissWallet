@@ -10,6 +10,7 @@ struct ContentView: View {
 
     @State private var showAddBarcodeView = false
     @State private var selectedBarcode: Barcode? = nil
+    @State private var showingLegalInfo = false
 
     var body: some View {
         NavigationView {
@@ -37,6 +38,21 @@ struct ContentView: View {
             .sheet(item: $selectedBarcode) { barcode in
                 BarcodeDetailView(barcode: barcode)
             }
+        }
+        .overlay(alignment: .bottomTrailing) {
+            Button {
+                showingLegalInfo.toggle()
+            } label: {
+                Image(systemName: "questionmark.circle")
+                    .foregroundColor(.gray.opacity(0.6))
+                    .font(.footnote)
+            }
+            .popover(isPresented: $showingLegalInfo) {
+                Text("© 2024 ValiQ Security GmbH")
+                    .padding()
+                    .font(.footnote)
+            }
+            .padding(8)
         }
     }
 
