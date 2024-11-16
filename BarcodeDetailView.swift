@@ -23,6 +23,8 @@ struct BarcodeDetailView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 300, height: 150)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 20)
                         .background(Color.white)
                         .cornerRadius(8)
                         .padding()
