@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543C44BC2D3BDBAE00281A8B /* Code128BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543C44BB2D3BDBAE00281A8B /* Code128BarcodeGenerator.swift */; };
 		54A3B06E2CDE2D0E00B5BF37 /* SwissWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3B06D2CDE2D0E00B5BF37 /* SwissWalletApp.swift */; };
 		54A3B0702CDE2D0E00B5BF37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A3B06F2CDE2D0E00B5BF37 /* ContentView.swift */; };
 		54A3B0722CDE2D0F00B5BF37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54A3B0712CDE2D0F00B5BF37 /* Assets.xcassets */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		543C44BB2D3BDBAE00281A8B /* Code128BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code128BarcodeGenerator.swift; sourceTree = "<group>"; };
+		54457EDE2CE9EAD100900778 /* SwissWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwissWallet.entitlements; sourceTree = "<group>"; };
 		54A3B06D2CDE2D0E00B5BF37 /* SwissWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwissWalletApp.swift; sourceTree = "<group>"; };
 		54A3B06F2CDE2D0E00B5BF37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54A3B0712CDE2D0F00B5BF37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		54A3B0612CDE2D0E00B5BF37 = {
 			isa = PBXGroup;
 			children = (
+				54457EDE2CE9EAD100900778 /* SwissWallet.entitlements */,
 				54A3B0812CDE2D1500B5BF37 /* Preview Content */,
 				54A3B0712CDE2D0F00B5BF37 /* Assets.xcassets */,
 				54A3B06F2CDE2D0E00B5BF37 /* ContentView.swift */,
@@ -61,6 +65,7 @@
 				54A3B06D2CDE2D0E00B5BF37 /* SwissWalletApp.swift */,
 				54A3B0862CDE2EA400B5BF37 /* AddBarcodeView.swift */,
 				54A3B0882CDE2F0100B5BF37 /* BarcodeDetailView.swift */,
+				543C44BB2D3BDBAE00281A8B /* Code128BarcodeGenerator.swift */,
 				54BCA72F2CDF6608004A55B1 /* QRCodeGenerator.swift */,
 				54A3B0842CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift */,
 				54A3B0832CDE2D5000B5BF37 /* SwissWallet.app */,
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543C44BC2D3BDBAE00281A8B /* Code128BarcodeGenerator.swift in Sources */,
 				54A3B0772CDE2D0F00B5BF37 /* Persistence.swift in Sources */,
 				54A3B0852CDE2D9D00B5BF37 /* EAN13BarcodeGenerator.swift in Sources */,
 				54A3B0702CDE2D0E00B5BF37 /* ContentView.swift in Sources */,
@@ -280,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwissWallet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
@@ -295,9 +302,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ValiQ-Security.SwissWallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwissWallet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
@@ -324,9 +336,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "ValiQ-Security.SwissWallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

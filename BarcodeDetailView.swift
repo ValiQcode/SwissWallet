@@ -17,7 +17,8 @@ struct BarcodeDetailView: View {
                 .font(.largeTitle)
                 .padding()
 
-            if barcode.type == "ean13" {
+            switch barcode.type {
+            case "ean13":
                 if let barcodeImage = drawEAN13Barcode(from: barcode.data ?? "") {
                     Image(uiImage: barcodeImage)
                         .resizable()
@@ -29,7 +30,19 @@ struct BarcodeDetailView: View {
                         .cornerRadius(8)
                         .padding()
                 }
-            } else {
+            case "code128":
+                if let barcodeImage = drawCode128Barcode(from: barcode.data ?? "") {
+                    Image(uiImage: barcodeImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 150)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 20)
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .padding()
+                }
+            default: // QR Code
                 QRCodeGenerator.draw(barcode.data ?? "")
                     .frame(width: 200, height: 200, alignment: .center)
                     .background(Color.white)
